@@ -1,0 +1,47 @@
+extends Layout
+
+block content 
+    br
+    br
+    h3 Expences List
+    br
+    table.table
+        thead
+            tr
+                th(scope='col') Sl No 
+                th(scope='col') Date 
+                th(scope='col') Catagory
+                th(scope='col') comments 
+                th(scope='col') Amount  
+        tbody
+            tr
+                th(scope='row') 1
+                td 
+                    a(href='/expences/view/1')= '02/12/2023'
+                td Home
+                td Plumbing work by shamanna
+                td 8,000
+            tr
+                th(scope='row') 1
+                td 11/12/2023
+                td Complex
+                td Painting by prabhu company
+                td 45,000
+            tr
+                th(scope='row') 3
+                td 09/12/2023
+                td Home
+                td None 
+                td 32,000
+
+    //- .row
+    //-     each exp, i in exps
+    //-         .col-md-15
+    //-             ul.list-group
+    //-                 li.list-group-item(style="display: flex; justify-content: space-between; align-items: center;")
+    //-                     a(href='/expences/view/' + exp.exp_id)=exp.exp_date
+    //-                     div(style="display: flex; flex-direction: column; align-items: flex-start;")
+    //-                         span Description: #{exp.exp_comments}
+    //-                     span #{exp.exp_Amount}
+    br
+    a.btn.btn.btn-secondary(type='button', href ='/expences/AddExp') Add Record

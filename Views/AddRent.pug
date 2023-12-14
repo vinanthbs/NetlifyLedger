@@ -1,0 +1,62 @@
+extends Layout
+
+block content
+    br
+    br
+    form(method="POST" action="/rent/AddRent" style='margin: auto; width: 500px;') 
+        h2  New Record
+        #form-group  
+            //- label Title  
+            //- input.form-control(name ='rent_title', type ='text', maxlength="20", required)  
+            label Title
+            .col-75
+                select#country(name='rent_title')
+                    option(value='January_Receipt') January_Receipt
+                    option(value='Febraury_Receipt') Febraury_Receipt
+                    option(value='March_Receipt') March_Receipt 
+                    option(value='April_Receipt') April_Receipt
+                    option(value='May_Receipt') May_Receipt
+                    option(value='June_Receipt') June_Receipt
+                    option(value='July_Receipt') July_Receipt
+                    option(value='August_Receipt') August_Receipt
+                    option(value='September_Receipt') September_Receipt
+                    option(value='October_Receipt') October_Receipt
+                    option(value='November_Receipt') November_Receipt
+                    option(value='December_Receipt') December_Receipt
+        #form-group
+            label Date of payment
+            input#rent_date.form-control(name='rent_date', type='text', maxlength='50', required)
+        #form-group 
+            //- label Storey Code  
+            //- input.form-control(name ='rent_storeycode', type ='text',maxlength="10", required)    
+            label Storey Code
+            .col-75
+                select#country(name='rent_storeycode')
+                    option(value='G1') G1
+                    option(value='G2') G2
+                    option(value='G12') G12 
+                    option(value='C8') C8
+                    option(value='F1') F1
+                    option(value='F2') F2
+                    option(value='F3') F3
+                    option(value='F4') F4
+                    option(value='F5') F5
+                    option(value='F6') F6                                                            
+        #form-group 
+            label Comments 
+            input.form-control(name ='rent_comments', type ='text', maxlength="20")  
+        #form-group 
+            label Amount  
+            input.form-control(name ='rent_Amount', type ='text',maxlength="10", required)              
+        br        
+        //-input.btn.btn-primary(type='submit', value ='SUBMIT')
+        span(style='margin-right: 5px;')
+        input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()") 
+            
+        script.
+            $(document).ready(function() {
+            $('#rent_date').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true
+            });
+            });

@@ -1,0 +1,86 @@
+extends Layout
+
+block content 
+    br
+    br
+    form(method="POST" action="/expences/AddExp" style='margin: auto; width: 500px;') 
+        h2  New Record
+        #form-group  
+            //- label Title  
+            //- input.form-control(name ='exp_title', type ='text', maxlength="20", required)  
+            label Title
+            .col-75
+                select#country(name='exp_title')
+                    option(value='January_Expence') January_Expence
+                    option(value='Febraury_Expence') Febraury_Expence
+                    option(value='March_Expence') March_Expence
+                    option(value='April_Expence') April_Expence
+                    option(value='May_Expence') May_Expence
+                    option(value='June_Expence') June_Expence
+                    option(value='July_Expence') July_Expence
+                    option(value='August_Expence') August_Expence
+                    option(value='September_Expence') September_Expence
+                    option(value='October_Expence') October_Expence
+                    option(value='November_Expence') November_Expence
+                    option(value='December_Expence') December_  Expence
+        #form-group
+            label Date of payment
+            input#rent_date.form-control(name='exp_date', type='text', maxlength='50', required)
+        #form-group 
+            //- label Catogery  
+            //- input.form-control(name ='exp_category', type ='text',maxlength="10", required)
+            label Catogery
+            .col-75
+                select#country(name='exp_category')
+                    option(value='Home') Home
+                    option(value='Complex') Complex
+        #form-group 
+            label Comments
+            input.form-control(name ='exp_comments', type ='text',maxlength="20")  
+        #form-group 
+            label Amount 
+            input.form-control(name ='exp_Amount', type ='text',maxlength="10", required)              
+        br    
+        //-input.btn.btn-primary(type='submit', value ='SUBMIT')
+        span(style='margin-right: 5px;')
+        input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+            
+        script.
+            $(document).ready(function() {
+                $('#rent_date').datepicker({
+                format: 'yyyy-mm-dd', // Set the desired date format
+                autoclose: true
+                });
+            });
+
+
+    //- form(method="POST" action="/expences/AddExp" style='margin: auto; width: 320px;') 
+    //-     h2 Add Expenses
+    //-     #form-group  
+    //-         label Expence title  
+    //-         input.form-control(name ='exp_title', type ='text', maxlength="20", required) 
+    //-     #form-group  
+    //-         label Date of payment
+    //-         input#rent_date.form-control(name='exp_date', type='text', maxlength='50', required)
+    //-     #form-group  
+    //-         label Expence Catogery  
+    //-         input.form-control(name ='exp_category', type ='text', maxlength="20", required) 
+    //-     #form-group  
+    //-         label Expence Comments  
+    //-         input.form-control(name ='exp_comments', type ='text', maxlength="20", required) 
+    //-     #form-group  
+    //-         label Expence Amount  
+    //-         input.form-control(name ='exp_Amount', type ='text', maxlength="20", required) 
+    //-     br              
+    //-     .row
+    //-         .col-md-6 
+    //-             input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+    //-         .col-md-6
+    //-             input.btn.btn-primary(type='submit', value ='SUBMIT')        
+    //-     script.
+    //-         $(document).ready(function() {
+    //-             $('#rent_date').datepicker({
+    //-             format: 'yyyy-mm-dd', // Set the desired date format
+    //-             autoclose: true
+    //-             });
+    //-         });

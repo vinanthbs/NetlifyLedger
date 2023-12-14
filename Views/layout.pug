@@ -1,0 +1,45 @@
+doctype html
+html(lang='en' data-bs-theme='auto')
+  head
+    title Ledger
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css') 
+    link(rel='stylesheet', href='/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')
+    link(rel="icon" href="/bower_components/bootstrap/logo(2).jpg" type="image/x-icon")
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css')
+ 
+  body
+  header.p-3.text-bg-dark
+    .container-fluid   
+      .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
+        a.d-flex.align-items-center.mb-2.mb-lg-0.text-white.text-decoration-none(href='/')
+          img(src='/bower_components/bootstrap/logo.png', alt='Logo', width='110', height='50', border-radius= '30px')
+        //-ul.nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content.centre.mb-md-0
+        ul.nav.col-12.col-lg-auto.me-lg-auto.justify-content.mb-md-0
+          li
+            a.nav-link.px-2.text-white(href='/') Dashboard
+          li
+            a.nav-link.px-2.text-white(href='/rent/viewAll') Receipt
+          li
+            a.nav-link.px-2.text-white(href='/expences/viewAll') Expense
+          li
+            a.nav-link.px-2.text-white(href='/report/custom') Custom Report
+          li
+            a.nav-link.px-2.text-white(href='/collective') Collective Data
+        //- form.col-12.col-lg-auto.mb-3.mb-lg-0.me-lg-3(role='search')
+        //-   input.form-control.form-control-dark.text-bg-white(type='search' placeholder='Search...' aria-label='Search')
+        .text-end
+          button.btn.btn-outline-light.me-2(type='button', href='/user/login/') Login 
+          span(style='margin-right: 5px;') 
+          button.btn.btn-warning(type='button', href='/user/logout') Logout 
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+  .container
+    block content
+    footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top
+.col-md-4.d-flex.align-items-center
+  a.mb-3.me-2.mb-md-0.text-body-secondary.text-decoration-none.lh-1(href='/')
+    svg.bi(width='30' height='24')
+      use(xlink:href='#bootstrap')
+  span.mb-3.mb-md-0.text-body-secondary © 2023 Ledger, Inc

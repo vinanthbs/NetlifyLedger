@@ -1,0 +1,28 @@
+extends layout
+
+block content 
+    
+    br
+    br
+    br
+    h2.pb-2.border-bottom(style='color:black; font-weight:bold;') Collective Data
+    .row
+        .col-md-6
+            p Total Receipt #{totalRentalAmount}
+            each rent , i in rents
+                ul.list-group
+                    li.list-group-item
+                        a(href='/rent/view/'+ rent.rent_id)=rent.rent_date
+                        div(style="display: flex; flex-direction: column; align-items: flex-start;")
+                            span #{rent.rent_storeycode}   
+                        span #{rent.rent_Amount}
+                            
+        .col-md-6
+            p Total Expences #{totalExpencesAmount}
+            each exp , i in exps 
+                ul.list-group            
+                    li.list-group-item
+                        a(href='expences/view/'+ exp.exp_id )=exp.exp_date 
+                        div(style="display: flex; flex-direction: column; align-items: flex-start;")
+                            span #{exp.exp_comments}
+                        span  #{exp.exp_Amount} 

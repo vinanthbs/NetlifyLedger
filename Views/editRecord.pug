@@ -1,0 +1,24 @@
+extends Layout
+
+block content 
+    form(method="POST" action="/rent/editask/1" ) 
+            h2  Edit Record  
+            #form-group 
+                label Rental title  
+                input.form-control(name ='rent_title', type ='text',maxlength="50", required)
+            #form-group 
+                label Date of payment   
+                input.form-control(name ='rent_date', type ='text',maxlength="10", required)
+            #form-group  
+                label Rent payment of storey  
+                input.form-control(name ='rent_storeycode', type ='text', maxlength="20", required)
+            #form-group  
+                label comments  
+                input.form-control(name ='rent_comments', type ='text', maxlength="20", required)
+            #form-group  
+                label Rental Amount  
+                input.form-control(name ='rent_Amount', type ='text', maxlength="20", required, )
+            br    
+            //-input.btn.btn-primary(type='submit', value ='SUBMIT')
+            input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+            input.btn.btn-primary(type='reset', value ='Reset')

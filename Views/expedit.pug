@@ -1,0 +1,25 @@
+extends Layout
+
+block content 
+    br
+    form(method="POST" action="/expences/editexp/1") 
+            h2  Edit Record  
+            #form-group 
+                label Expence title  
+                input.form-control(name ='exp_title', type ='text',maxlength="50", required, )
+            #form-group 
+                label Date of Expence   
+                input.form-control(name ='exp_date', type ='text',maxlength="10", required, )
+            #form-group  
+                label Expence catagory   
+                input.form-control(name ='exp_category', type ='text', maxlength="20", required,)
+            #form-group  
+                label comments  
+                input.form-control(name ='exp_comments', type ='text', maxlength="20", required, )
+            #form-group  
+                label Expence Amount  
+                input.form-control(name ='exp_Amount', type ='text', maxlength="20", required, )
+            br    
+            //-input.btn.btn-primary(type='submit', value ='SUBMIT')
+            br
+            input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")

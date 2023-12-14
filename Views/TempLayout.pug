@@ -1,0 +1,93 @@
+doctype html
+html
+  head
+    script(src='/bower_components/jquery/dist/jquery.min.js')    
+    script(src='/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+    link(rel='stylesheet' href='/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css') 
+    link(rel="icon" href="/bower_components/bootstrap/logo.png" type="image/x-icon")
+    
+
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    style.
+      body {
+      font-family: "Lato", sans-serif;
+      }
+      .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #D5D8DC;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      }
+      .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #000;
+      display: block;
+      transition: 0.3s;
+      }
+      .sidenav a:hover {
+      color: #f1f1f1;
+      }
+      .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      }
+      #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      }
+      @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+      }
+  body
+    div(style='color: Black; text-align: center;')
+    #mySidenav.sidenav
+      a.closebtn(href='javascript:void(0)' onclick='closeNav()') ×
+      a(href='/') Home
+      a(href='/rent/viewAll') Receipt 
+      a(href='/expences/viewAll') Expense
+      a(href='/report/custom') Report
+      a(href='/collective') Collective Data
+    #main
+      //- span(style='font-size:30px;cursor:pointer' onclick='openNav()') ☰ Ledger
+      //- div.text-end
+      //-   a.button.btn.btn-outline.black.me-2(type='button', href='/user/login/') Login
+      //-   a.button.btn.btn-secondary(type='button', href='/user/register/') Sign-up
+      //-   span(style='margin-right: 5px;')   
+      //-   a.button.btn.btn-warning(type='button', href='/user/logout/') Logout
+      //- 
+      span(style="font-size:30px; cursor:pointer; display: flex; justify-content: space-between; align-items: center;" onclick='openNav()')
+        span ☰ Ledger
+        div
+          a.button.btn.btn-primary.black.me-2(type='button', href='/user/login/') Login/Register 
+          //-a.button.btn.btn-secondary(type='button', href='/user/register/') Sign-up
+          span(style='margin-right: 5px;') 
+          a.button.btn.btn-warning(type='button', href='/user/logout/') Logout
+      span(style='font-weight:bold; font-size: 50px; text-align: center') 
+    .container
+      .row.g-4.py-5.row-cols-1.row-cols-lg-3 
+        block content
+    script.
+      function openNav() {
+      document.getElementById("mySidenav").style.width = "180px";
+      document.getElementById("main").style.marginLeft = "180px";
+      }
+      function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      }
+
+

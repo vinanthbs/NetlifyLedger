@@ -1,0 +1,36 @@
+extends Layout
+
+block content
+    br
+    p Sl No : 1
+    p Date of payment: 20/12/2023
+    p Storey code: Ground 1
+    p Amount paid by: Akhilesh
+    p Amount: 8,000
+    p paid through: Cash
+    br
+    a.button.btn.btn-primary(type='button', href='/rent/editask/1' ) Edit
+    br
+    input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+    br
+    //-a.button.btn.btn-danger(type='button', onclick='myFunction()', href='/rent/delete/'+ rent.rent_id) Delete
+    script.
+        function myFunction() {
+        alert("Data has been deleted sucessfully");
+        }
+
+    //- p Rental title: #{rent.rent_title}
+    //- p Rent payed for: #{rent.rent_storeycode} 
+    //- p Comments if any: #{rent.rent_comments}
+    //- h5 Payment date: #{rent.rent_date}  
+    //- h5 Rental Amount: #{rent.rent_Amount}
+    //- br
+    //- a.button.btn.btn-primary(type='button', href='/rent/editask/' + rent.rent_id) Edit
+    //- br
+    //- input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+    //- br
+    //- a.button.btn.btn-danger(type='button', onclick='myFunction()', href='/rent/delete/'+ rent.rent_id) Delete
+    //- script.
+    //-     function myFunction() {
+    //-     alert("Task has been deleted sucessfully");
+    //-     }

@@ -1,0 +1,35 @@
+extends Layout
+
+block content
+    br
+    p Sl No: 1
+    p Date: 02/12/2023 
+    p Catagory: Home
+    p Comments: Plumbing work by shamanna 
+    p Amount: 8,000
+    br
+    a.button.btn.btn-primary(type='button', href='/expences/editexp/1') Edit Record
+    br
+    input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+    br
+    //- a.button.btn.btn-danger(type='button', onclick='myFunction()', href='/expences/delete/'+ exp.exp_id) Delete Record
+    script.
+        function myFunction() {
+        alert("Record has been deleted sucessfully");
+        }
+
+    //- p Expence title: #{exp.exp_title}
+    //- p Expence Date: #{exp.exp_date} 
+    //- p Expence category: #{exp.exp_category}
+    //- h5 Expence comments: #{exp.exp_comments}  
+    //- h5 Expence Amount: #{exp.exp_Amount}
+    //- br
+    //- a.button.btn.btn-primary(type='button', href='/expences/editexp/' + exp.exp_id) Edit Record
+    //- br
+    //- input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+    //- br
+    //- a.button.btn.btn-danger(type='button', onclick='myFunction()', href='/expences/delete/'+ exp.exp_id) Delete Record
+    //- script.
+    //-     function myFunction() {
+    //-     alert("Record has been deleted sucessfully");
+    //-     }

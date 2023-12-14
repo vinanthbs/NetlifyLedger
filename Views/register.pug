@@ -1,0 +1,23 @@
+extends layout
+
+block content 
+    br
+    br
+    form(method="POST" action="/user/register") 
+            h2  Registration form
+            #form-group  
+                label User Name  
+                input.form-control(name ='name', type ='text', maxlength="20", required)  
+            #form-group
+                label e-mail address
+                input#exp_date.form-control(name='email', type='text', maxlength='50', required) 
+            #form-group 
+                label password  
+                input.form-control(name ='password', type ='password',maxlength="19", required)
+            #form-group 
+                label confirm password   
+                input.form-control(name ='password2', type ='password',maxlength="19")               
+            br    
+            input.btn.btn-primary(type='submit', value ='SUBMIT')
+            span(style='margin-right: 5px;')
+            input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")

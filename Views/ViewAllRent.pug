@@ -1,0 +1,53 @@
+extends Layout
+
+block content 
+    br
+    br
+    h3 Reciepts List
+    br
+    table.table
+        thead
+            tr
+                th(scope='col') Sl No 
+                th(scope='col') Date of payment
+                th(scope='col') Storey code
+                th(scope='col') Amount paid by
+                th(scope='col') Amount
+                th(scope='col') Paid through 
+        tbody
+            tr   
+                th(scope='row') 1
+                td 
+                    a(href='/rent/view/1')= '20/12/2023'
+                td Ground 1
+                td Akhilesh
+                td 8,000
+                td Cash
+            tr
+                th(scope='row') 1
+                td 18/12/2023
+                td Celler 0
+                td Singhania
+                td 14,000
+                td UPI
+            tr
+                th(scope='row') 3
+                td 18/12/2023
+                td First 12
+                td Vertesh 
+                td 13,500
+                td UPI
+
+
+    //-.row
+        //- each rent, i in rents
+        //-     .col-md-15
+        //-         ul.list-group
+        //-             li.list-group-item(style="display: flex; justify-content: space-between; align-items: center;")
+        //-                 a(href='/rent/view/' + rent.rent_id)=rent.rent_date
+        //-                 div(style="display: flex; flex-direction: column; align-items: flex-start;")
+        //-                     span storey code: #{rent.rent_storeycode}
+        //-                 span comments: #{rent.rent_comments}
+        //-                 span #{rent.rent_Amount}
+    br
+    a.btn.btn.btn-secondary(type='button', href ='/rent/AddRent') Add Record            

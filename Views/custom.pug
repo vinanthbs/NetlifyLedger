@@ -1,0 +1,39 @@
+extends Layout
+
+block content
+    br
+    br
+    a.btn.btn-primary(href='/report/downloadAll') Download All
+    span(style='margin-right: 10px; ')
+    a.btn.btn-primary(href='/report/financialYear') Current Financial Year
+    span(style='margin-right: 10px; ')
+    a.btn.btn-primary(href='/report/previousfinancialYear') Previous Financial Year
+    span(style='margin-right: 10px; ')
+    a.btn.btn-primary(href='/report/downloadPDF') Download PDF
+    br
+    br
+    br
+    form(method="POST" action="/report/custom") 
+        h2  Choose Date 
+        #form-group 
+            label Start Date  
+            input.form-control(name ='start_date', type ='text',maxlength="20",required)  
+        #form-group 
+            label End Date
+            input.form-control(name ='end_date', type ='text',maxlength="10", required) 
+        br    
+        input.btn.btn-secondary(type='button', value ='Cancel', onclick="history.back()")
+        span(style='margin-right: 10px; ')
+        input.btn.btn-primary(type='submit', value ='SUBMIT')
+        
+        script.
+            $(document).ready(function() {
+                $('#start_date').datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true
+                });
+                $('#end_date').datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true
+                });
+            });

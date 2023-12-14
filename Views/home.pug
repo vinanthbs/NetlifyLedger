@@ -1,0 +1,17 @@
+extends Layout
+
+block content 
+    //-#hanging-icons.container.px-4.py-5
+    br 
+    br 
+    h2.pb-2.border-bottom(style='color:black; font-weight:bold;') Dashboard 
+    .row.g-4.py-5.row-cols-1.row-cols-lg-3.justify-content-center
+        span(style='text-align: center; display: block; width: 375px; height: 130px; border-style: solid; border: 2px solid black; border-radius: 7px; font-weight:bold; margin-right: 5px; ')
+            h2.pb-2(style='color: Black;') Recipt
+            p3.justify-content-center(style='color:#50C878; font-size: 40px; ') 1,92,000#{totalRentalAmount}
+        span(style='text-align: center; display: block; width: 375px; height: 130px; border-style: solid; border: 2px solid black; border-radius: 7px; font-weight:bold; margin-right: 5px;')
+            h2.pb-2(style='color: Black;') Expences  
+            p3(style='color:#EE4B2B; font-size: 40px;') 1,20,000#{totalExpencesAmount}
+        span(style='text-align: center; display: block; width: 375px; height: 130px; border-style: solid;   border: 2px solid black;  border-radius: 7px; font-weight:bold; ')
+            h2.pb-2(style='color: Black;') Net Amount  
+            p3(style='color:#5D3FD3;  font-size: 40px;') 80,000#{totalRentalAmounttotalExpencesAmount}
